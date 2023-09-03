@@ -16,6 +16,8 @@ Here is a link to the screen recording of the App
 
 [https://photos.app.goo.gl/ZoDRtA9fKS3x8hx99](https://photos.app.goo.gl/ZoDRtA9fKS3x8hx99)
 
+Here is a link to the apk file
+https://drive.google.com/drive/folders/1CIJpogvTCZmzB6xeA8zXY5NerFB6bsHv?usp=sharing
 ## Features
 
 - One Stop for all things Space Mission Based
@@ -23,9 +25,6 @@ Here is a link to the screen recording of the App
 - Fullscreen mode: Utilization of entire screen for smooth user experience
 - Latest News: News from the latest updates by the Space Organization
 - Augmented Reality Integration: AR  gives a more interactive experience with the application
-
-
-![Logo](https://github.com/CarolDsillva/StellarIndia/blob/main/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png)
 
 
 ## Dependencies Used
