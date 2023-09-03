@@ -9,10 +9,8 @@ This project has been built using the Flutter framework, which allows to build a
 
 ## Screenshots
 
-![App Screenshot](https://github.com/CarolDsillva/StellarIndia/blob/main/Screenshots/Screenshot1.jpg)
-![App Screenshot](https://github.com/CarolDsillva/StellarIndia/blob/main/Screenshots/Screenshot4.jpg)
-![App Screenshot](https://github.com/CarolDsillva/StellarIndia/blob/main/Screenshots/Screenshot9.jpg)
-
+![App Screenshot](https://github.com/CarolDsillva/StellarIndia/blob/main/Screenshots/ScreenshotCombined.jpg)
+![App Screenshot](https://photos.app.goo.gl/ZoDRtA9fKS3x8hx99)
 ## Features
 
 - One Stop for all things Space Mission Based
