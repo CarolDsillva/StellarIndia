@@ -3,6 +3,7 @@ import 'package:space/screens/discover_screen.dart';
 import 'package:space/screens/home_screen.dart';
 import 'package:space/screens/main_menu.dart';
 
+//The following has the UI for the Bottom Navigation bar
 class BottomNavBar extends StatelessWidget {
   const BottomNavBar({
     Key? key,
@@ -25,6 +26,7 @@ class BottomNavBar extends StatelessWidget {
           icon: Container(
             margin: const EdgeInsets.only(left: 50),
             child: IconButton(
+              //Navigating the the Home Screen
               onPressed: () {
                 Navigator.pushNamed(context, HomeScreen.routeName);
               },
@@ -36,6 +38,7 @@ class BottomNavBar extends StatelessWidget {
         BottomNavigationBarItem(
           icon: IconButton(
             onPressed: () {
+              //Navigating the the Contact Screen
               Navigator.pushNamed(context, DiscoverScreen.routeName);
             },
             icon: const Icon(Icons.person),
@@ -47,6 +50,7 @@ class BottomNavBar extends StatelessWidget {
             margin: const EdgeInsets.only(right: 50),
             child: IconButton(
               onPressed: () {
+                //Navigating the the Game Screen(MainMenu)
                 Navigator.pushNamed(context, MainMenu.routeName);
               },
               icon: const Icon(Icons.attractions_outlined),

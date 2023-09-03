@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
 
+//The following contains the information for the contact part of the application
 class Contact extends Equatable {
   final String id;
   final String title;

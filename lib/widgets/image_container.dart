@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//This widget is used to display the Images on the carousels
 class ImageContainer extends StatelessWidget {
   const ImageContainer({
     Key? key,
@@ -29,10 +30,6 @@ class ImageContainer extends StatelessWidget {
       padding: padding,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        // image: DecorationImage(
-        //   image: NetworkImage(imageUrl),
-        //   fit: BoxFit.cover,
-        // ),
         image: DecorationImage(
           image: AssetImage(imageUrl),
           fit: BoxFit.cover,

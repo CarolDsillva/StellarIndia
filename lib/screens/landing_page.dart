@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:space/models/article_model.dart';
 import 'package:space/screens/home_screen.dart';
 
+//This screen has the UI for the Landing/Onboarding Page
+//User can click on the Button and enter the App
+
 class Landing extends StatelessWidget {
   const Landing({Key? key}) : super(key: key);
 
@@ -13,6 +16,7 @@ class Landing extends StatelessWidget {
     return Scaffold(
       // backgroundColor: Colors.black,
       body: Container(
+        //The following is the Background image for the landing page
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage("./assets/images/onbaording.png"),
@@ -26,6 +30,7 @@ class Landing extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  //The following consists oif the text used in the landing page
                   Text(
                     'Explore the',
                     style: Theme.of(context).textTheme.headlineSmall!.copyWith(
@@ -59,6 +64,8 @@ class Landing extends StatelessWidget {
                   SizedBox(
                     height: 10,
                   ),
+
+                  //The following Page Consists of the button to enter the app
                   Row(
                     children: [
                       InkWell(

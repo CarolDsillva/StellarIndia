@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//This widget is used to display the author and the institution name
 class CustomTag extends StatelessWidget {
   const CustomTag({
     Key? key,

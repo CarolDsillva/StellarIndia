@@ -9,6 +9,8 @@ import 'package:url_launcher/url_launcher.dart';
 import '../widgets/bottom_nav_bar.dart';
 import '../widgets/image_container.dart';
 
+//This screen has the UI for the Home Screen
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -33,6 +35,7 @@ class HomeScreen extends StatelessWidget {
       bottomNavigationBar: const BottomNavBar(index: 0),
       extendBodyBehindAppBar: true,
       body: ListView(padding: EdgeInsets.zero, children: [
+        //The order of the children lies here and is rendered in the same sequence
         _NewsOfTheDay(article: article),
         _BreakingNews(articles: Article.articles),
         _Facts(articles: Article.articles),
@@ -43,6 +46,8 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
+// ----------------------------------------------------------------
+// The following Contains the Space Missions and the carousel on the app
 class _BreakingNews extends StatelessWidget {
   const _BreakingNews({
     Key? key,
@@ -128,6 +133,8 @@ class _BreakingNews extends StatelessWidget {
   }
 }
 
+// The following contains the facts of the app
+//This class has potential for being improved and hence is in a seperate class
 class _Facts extends StatelessWidget {
   const _Facts({
     Key? key,
@@ -168,6 +175,8 @@ class _Facts extends StatelessWidget {
   }
 }
 
+//This screen has the UI for the Latest News
+//The information on this page is available in the news_modal.dart file in the models directory
 class _LatestNews extends StatelessWidget {
   const _LatestNews({
     Key? key,
@@ -252,6 +261,9 @@ class _LatestNews extends StatelessWidget {
   }
 }
 
+//This screen has the UI for the hero Section
+//The following consists of a hero image along with an option to read more
+//The information on this page is available in the articles_modal.dart file in the models directory
 class _NewsOfTheDay extends StatelessWidget {
   const _NewsOfTheDay({
     Key? key,
@@ -322,6 +334,8 @@ class _NewsOfTheDay extends StatelessWidget {
   }
 }
 
+//This screen has the UI for the About section
+//The follwing section is built so that more information can be passed
 class _About extends StatelessWidget {
   _About({
     Key? key,
@@ -329,6 +343,8 @@ class _About extends StatelessWidget {
   }) : super(key: key);
 
   final List<Article> articles;
+
+  //URL to the Augmented Reality Effect
   final Uri url = Uri.parse(
       "https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=ecc36fc7f3b546a491341569ba0c33b6&metadata=01");
   final ButtonStyle style = ElevatedButton.styleFrom(
@@ -358,6 +374,8 @@ class _About extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
+
+          //About section Overview
           Text(
             "India's space program has made significant progress in recent years, with successful missions to the Moon and Mars. The Indian Space Research Organization (ISRO) is planning to send a crewed mission to space in the near future. These missions have helped India to become a major player in the global space community.",
             style: Theme.of(context)
@@ -372,7 +390,7 @@ class _About extends StatelessWidget {
             ),
           ),
           Text(
-            "India achieved a milestone by being the only country to have a successfully landing Chandrayaan-3 on the South Pole of the moon. ",
+            "India achieved a milestone by being the only country to have a successfully landing Chandrayaan-3 on the South Pole of the moon.",
             style: Theme.of(context)
                 .textTheme
                 .bodyLarge!
@@ -381,6 +399,8 @@ class _About extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
+
+          //The follwing contains the Evelated button with the Augmented Reatity Effect made for this app
           Container(
             height: 50,
             width: 2100,

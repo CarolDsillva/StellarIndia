@@ -115,7 +115,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
                                               gradient: LinearGradient(
                                                   colors: [
                                                     Color.fromARGB(
-                                                        255, 31, 22, 124),
+                                                        255, 21, 21, 26),
                                                     Color.fromARGB(
                                                         255, 0, 0, 0),
                                                   ],

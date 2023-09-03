@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
 
+//The following contains the information for the latest news part of the application
 class News extends Equatable {
   final String id;
   final String title;

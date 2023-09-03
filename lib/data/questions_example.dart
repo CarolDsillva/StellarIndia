@@ -1,5 +1,6 @@
 import 'package:space/models/question_model.dart';
 
+//The following contains all the data required for the quiz screen of the application
 List<QuestionModel> questions = [
   QuestionModel(
     "When was Chandrayaan 3 launched?",

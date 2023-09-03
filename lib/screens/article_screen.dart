@@ -4,6 +4,8 @@ import '../models/article_model.dart';
 import '../widgets/custom_tag.dart';
 import '../widgets/image_container.dart';
 
+//This screen has the UI for the article and space missions
+//The information on this page is available in the article_modal.dart file in the models directory
 class ArticleScreen extends StatelessWidget {
   const ArticleScreen({Key? key}) : super(key: key);
 
@@ -24,6 +26,7 @@ class ArticleScreen extends StatelessWidget {
         extendBodyBehindAppBar: true,
         body: ListView(
           children: [
+            //The following is the structure of the articles page
             _NewsHeadline(article: article),
             _NewsBody(article: article)
           ],
@@ -59,6 +62,7 @@ class _NewsBody extends StatelessWidget {
               CustomTag(
                 backgroundColor: Colors.black,
                 children: [
+                  //The following contains the author name/institution name
                   CircleAvatar(
                     radius: 10,
                     backgroundImage: NetworkImage(
@@ -74,36 +78,6 @@ class _NewsBody extends StatelessWidget {
                   ),
                 ],
               ),
-              // const SizedBox(width: 10),
-              // CustomTag(
-              //   backgroundColor: Colors.grey.shade200,
-              //   children: [
-              //     const Icon(
-              //       Icons.timer,
-              //       color: Colors.grey,
-              //     ),
-              //     const SizedBox(width: 10),
-              //     Text(
-              //       '${DateTime.now().difference(article.createdAt).inHours}h',
-              //       style: Theme.of(context).textTheme.bodyMedium,
-              //     ),
-              //   ],
-              // ),
-              // const SizedBox(width: 10),
-              // CustomTag(
-              //   backgroundColor: Colors.grey.shade200,
-              //   children: [
-              //     const Icon(
-              //       Icons.remove_red_eye,
-              //       color: Colors.grey,
-              //     ),
-              //     const SizedBox(width: 10),
-              //     Text(
-              //       '${article.views}',
-              //       style: Theme.of(context).textTheme.bodyMedium,
-              //     ),
-              //   ],
-              // ),
             ],
           ),
           const SizedBox(height: 20),

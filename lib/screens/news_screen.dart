@@ -4,6 +4,8 @@ import '../models/news_model.dart';
 import '../widgets/custom_tag.dart';
 import '../widgets/image_container.dart';
 
+//This screen has the UI for the News Section of the App
+//The information on this page is available in the news_modal.dart file in the models directory
 class NewsScreen extends StatelessWidget {
   const NewsScreen({Key? key}) : super(key: key);
 

@@ -10,12 +10,14 @@ class MainMenu extends StatefulWidget {
   _MainMenuState createState() => _MainMenuState();
 }
 
+//This screen has the UI for the MainMenu of the Game Feature
 class _MainMenuState extends State<MainMenu> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColor.pripmaryColor,
       body: Container(
+        //The following is the background image of the App
         decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage("./assets/images/quiz_hero.png"),
@@ -32,6 +34,7 @@ class _MainMenuState extends State<MainMenu> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const Center(
+                //The following is the Game title
                 child: Text(
                   "Stellar Quiz",
                   style: TextStyle(
@@ -69,15 +72,6 @@ class _MainMenuState extends State<MainMenu> {
                   ),
                 ),
               ),
-              //const Center(
-              //child: Text(
-              // "lol",
-              // textAlign: TextAlign.center,
-              // style: TextStyle(
-              //  color: Colors.white,
-              // ),
-              //),
-              //),
             ],
           ),
         ),

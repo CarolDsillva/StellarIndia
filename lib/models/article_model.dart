@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
 
+//The following contains the information for the Articles part of the application
 class Article extends Equatable {
   final String id;
   final String title;

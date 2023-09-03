@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:space/models/question_model.dart';
 import 'package:space/ui/shared/color.dart';
 
+//The following widget is used to render the questions on the quiz screen
 Widget questionWidget(
     QuestionModel questionModel, void Function() function, bool presed) {
   return Column(

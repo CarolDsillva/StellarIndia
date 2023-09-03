@@ -4,6 +4,9 @@ import '../models/contact_model.dart';
 import '../widgets/custom_tag.dart';
 import '../widgets/image_container.dart';
 
+//This screen has the UI for the contact information in the contact page
+//The information on this page is available in the contact_modal.dart file in the models directory
+
 class ContactScreen extends StatelessWidget {
   const ContactScreen({Key? key}) : super(key: key);
 

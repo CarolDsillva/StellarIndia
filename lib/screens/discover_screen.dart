@@ -5,6 +5,8 @@ import 'package:space/widgets/image_container.dart';
 import '../models/contact_model.dart';
 import '../widgets/bottom_nav_bar.dart';
 
+//This screen has the UI for the Connect/Discovery Screen
+//The information on this page is available in the connect_modal.dart file  in the models directory and contact_scree.dart in the screens directory
 class DiscoverScreen extends StatelessWidget {
   const DiscoverScreen({Key? key}) : super(key: key);
 
