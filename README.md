@@ -10,7 +10,12 @@ This project has been built using the Flutter framework, which allows to build a
 ## Screenshots
 
 ![App Screenshot](https://github.com/CarolDsillva/StellarIndia/blob/main/Screenshots/ScreenshotCombined.png)
-![App Screenshot](https://photos.app.goo.gl/ZoDRtA9fKS3x8hx99)
+
+## Demo
+Here is a link to the screen recording of the App
+
+[https://photos.app.goo.gl/ZoDRtA9fKS3x8hx99](https://photos.app.goo.gl/ZoDRtA9fKS3x8hx99)
+
 ## Features
 
 - One Stop for all things Space Mission Based
@@ -20,6 +25,20 @@ This project has been built using the Flutter framework, which allows to build a
 - Augmented Reality Integration: AR  gives a more interactive experience with the application
 
 
+![Logo](https://github.com/CarolDsillva/StellarIndia/blob/main/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png)
+
+
+## Dependencies Used
+
+[equatable](https://pub.dev/packages/equatable) - A Dart package that helps to implement value based equality without needing to explicitly override == and hashCode.
+
+[url_launcher](https://pub.dev/packages/url_launcher) - Flutter plugin for launching a URL. Supports web, phone, SMS, and email schemes
+
+## Built with
+
+- [Flutter](https://flutter.dev/) - Beautiful native apps in record time.
+- [Android Studio](https://developer.android.com/studio/index.html/) - Tools for building apps on every type of Android device.
+- [Visual Studio Code](https://code.visualstudio.com/) - Code editing. Redefined.
 ## Authors
 
 - Carol Dsilva[@CarolDsillva](https://github.com/CarolDsillva)
