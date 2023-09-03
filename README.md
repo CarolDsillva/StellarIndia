@@ -1,16 +1,17 @@
-# space
 
-A new Flutter project.
+# Project Title
 
-## Getting Started
+StellarIndia
 
-This project is a starting point for a Flutter application.
+Description:
 
-A few resources to get you started if this is your first Flutter project:
+An app created by using flutter and dart to spread awareness about the current affairs and projects of our Indian Space missions.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Includes a home page which consists of latest news and research articles related to the Indian Space Missions.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+It also includes a fun quiz segment with a few general knowledge questions related to the Indian space organisation and information regarding it.
+
+The app also provides a contacts section in order to dive deeper and connect with the brains behind the Missions to combine forces to achieve higher goals and records
+
+
+
