@@ -1,17 +1,30 @@
 
-# Project Title
+# StellarIndia
 
-StellarIndia
+The purpose of this project is to develop the ultimate Space Edu-Tainment experience in a variety of platforms.
 
-Description:
+From the start, StellarIndia has been developed to be light-weight, fast and easy to use. It is built with the purpose that education comes together with interaction.
 
-An app created by using flutter and dart to spread awareness about the current affairs and projects of our Indian Space missions.
+This project has been built using the Flutter framework, which allows to build an app for mobile, desktop & web, from a single codebase.
 
-Includes a home page which consists of latest news and research articles related to the Indian Space Missions.
+## Screenshots
 
-It also includes a fun quiz segment with a few general knowledge questions related to the Indian space organisation and information regarding it.
+![App Screenshot](https://github.com/CarolDsillva/StellarIndia/blob/main/Screenshots/Screenshot1.jpg)
+![App Screenshot](https://github.com/CarolDsillva/StellarIndia/blob/main/Screenshots/Screenshot4.jpg)
+![App Screenshot](https://github.com/CarolDsillva/StellarIndia/blob/main/Screenshots/Screenshot9.jpg)
 
-The app also provides a contacts section in order to dive deeper and connect with the brains behind the Missions to combine forces to achieve higher goals and records
+## Features
+
+- One Stop for all things Space Mission Based
+- Interactive Games: to engae the user and learn simultanously
+- Fullscreen mode: Utilization of entire screen for smooth user experience
+- Latest News: News from the latest updates by the Space Organization
+- Augmented Reality Integration: AR  gives a more interactive experience with the application
 
 
+## Authors
+
+- Carol Dsilva[@CarolDsillva](https://github.com/CarolDsillva)
+- Adrian Richard[@AaReechu](https://github.com/AaReechu)
+- Aishwaraya Biradar[@Aichwaryabiradar](https://github.com/Aichwaryabiradar)
 
