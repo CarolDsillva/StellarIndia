@@ -9,10 +9,11 @@ import '../widgets/image_container.dart';
 class NewsScreen extends StatelessWidget {
   const NewsScreen({Key? key}) : super(key: key);
 
-  static const routeName = '/news';
+  static const routeName = '/news'; // Define a named route for this screen
   @override
   Widget build(BuildContext context) {
-    final news = ModalRoute.of(context)!.settings.arguments as News;
+    final news = ModalRoute.of(context)!.settings.arguments
+        as News; // Extract news data from route arguments
     return ImageContainer(
       width: double.infinity,
       imageUrl: news.imageUrl,
@@ -32,6 +33,7 @@ class NewsScreen extends StatelessWidget {
   }
 }
 
+// Widget for displaying the main body of the news
 class _NewsBody extends StatelessWidget {
   const _NewsBody({
     Key? key,
@@ -53,6 +55,7 @@ class _NewsBody extends StatelessWidget {
       ),
       child: Column(
         children: [
+          // Display author information, timestamp, and views
           Row(
             children: [
               CustomTag(
@@ -106,6 +109,7 @@ class _NewsBody extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 20),
+          // Display news title and body
           Text(
             news.title,
             style: Theme.of(context)
@@ -120,6 +124,8 @@ class _NewsBody extends StatelessWidget {
                 Theme.of(context).textTheme.bodyMedium!.copyWith(height: 1.5),
           ),
           const SizedBox(height: 20),
+
+          // Display grid of images
           GridView.builder(
               shrinkWrap: true,
               itemCount: 2,
@@ -140,6 +146,7 @@ class _NewsBody extends StatelessWidget {
   }
 }
 
+// Widget for displaying the news headline
 class _NewsHeadline extends StatelessWidget {
   const _NewsHeadline({
     Key? key,
@@ -171,6 +178,8 @@ class _NewsHeadline extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 10),
+
+          // Display news title and subtitle
           Text(
             news.title,
             style: Theme.of(context).textTheme.headlineSmall!.copyWith(

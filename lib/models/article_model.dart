@@ -2,17 +2,18 @@ import 'package:equatable/equatable.dart';
 
 //The following contains the information for the Articles part of the application
 class Article extends Equatable {
-  final String id;
-  final String title;
-  final String subtitle;
-  final String body;
-  final String author;
-  final String authorImageUrl;
-  final String category;
-  final String imageUrl;
-  final int views;
-  final DateTime createdAt;
+  final String id; // Unique identifier for the article
+  final String title; // Title of the article
+  final String subtitle; // Subtitle or additional details about the article
+  final String body; // Full content of the article
+  final String author; // Author's name or contributor
+  final String authorImageUrl; // URL of the author's image
+  final String category; // Category or type of the article
+  final String imageUrl; // URL of an image associated with the article
+  final int views; // Number of views for the article
+  final DateTime createdAt; // Timestamp indicating when the article was created
 
+// Constructor to initialize an Article object
   const Article({
     required this.id,
     required this.title,
@@ -26,6 +27,7 @@ class Article extends Equatable {
     required this.createdAt,
   });
 
+// List of sample articles for demonstration
   static List<Article> articles = [
     Article(
       id: '1',

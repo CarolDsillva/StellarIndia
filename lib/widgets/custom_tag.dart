@@ -21,7 +21,8 @@ class CustomTag extends StatelessWidget {
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
-        children: children,
+        children:
+            children, // Display the list of widgets within the custom tag.
       ),
     );
   }

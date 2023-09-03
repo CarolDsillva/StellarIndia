@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:space/models/article_model.dart';
 import 'package:space/screens/home_screen.dart';
 
-//This screen has the UI for the Landing/Onboarding Page
-//User can click on the Button and enter the App
+// This screen has the UI for the Landing/Onboarding Page
+// Users can click on the button and enter the app
 
 class Landing extends StatelessWidget {
   const Landing({Key? key}) : super(key: key);
 
-  static const routeName = '/';
+  static const routeName = '/'; // Define a named route for this screen.
   @override
   Widget build(BuildContext context) {
     Article article = Article.articles[0];

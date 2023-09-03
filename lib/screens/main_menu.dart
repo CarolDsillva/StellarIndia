@@ -5,17 +5,17 @@ import 'package:space/ui/shared/color.dart';
 class MainMenu extends StatefulWidget {
   const MainMenu({Key? key}) : super(key: key);
 
-  static const routeName = '/game';
+  static const routeName = '/game'; // Define a named route for this screen
   @override
   _MainMenuState createState() => _MainMenuState();
 }
 
-//This screen has the UI for the MainMenu of the Game Feature
+// This screen has the UI for the MainMenu of the Game Feature
 class _MainMenuState extends State<MainMenu> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.pripmaryColor,
+      backgroundColor: AppColor.pripmaryColor, // Set the background color
       body: Container(
         //The following is the background image of the App
         decoration: const BoxDecoration(
@@ -48,7 +48,7 @@ class _MainMenuState extends State<MainMenu> {
                 child: Center(
                   child: RawMaterialButton(
                     onPressed: () {
-                      //Navigating the the Quizz Screen
+                      // Navigating to the Quiz Screen when the button is pressed
                       Navigator.push(
                           context,
                           MaterialPageRoute(
@@ -56,7 +56,8 @@ class _MainMenuState extends State<MainMenu> {
                           ));
                     },
                     shape: const StadiumBorder(),
-                    fillColor: AppColor.secondaryColor,
+                    fillColor:
+                        AppColor.secondaryColor, // Set button background color
                     child: const Padding(
                       padding: EdgeInsets.symmetric(
                           vertical: 12.0, horizontal: 24.0),

@@ -1,18 +1,19 @@
 import 'package:equatable/equatable.dart';
 
-//The following contains the information for the latest news part of the application
+// A class representing news articles with various properties
 class News extends Equatable {
-  final String id;
-  final String title;
-  final String subtitle;
-  final String body;
-  final String author;
-  final String authorImageUrl;
-  final String category;
-  final String imageUrl;
-  final int views;
-  final DateTime createdAt;
+  final String id; // Unique identifier for the news
+  final String title; // Title of the news article
+  final String subtitle; // Subtitle or summary of the news
+  final String body; // Full text of the news article
+  final String author; // Author's name
+  final String authorImageUrl; // URL of the author's image
+  final String category; // Category or topic of the news
+  final String imageUrl; // URL of the news article's image
+  final int views; // Number of views for the news article
+  final DateTime createdAt; // Timestamp indicating when the news was created
 
+// Constructor to initialize a News object
   const News({
     required this.id,
     required this.title,
@@ -26,6 +27,7 @@ class News extends Equatable {
     required this.createdAt,
   });
 
+// List of sample news articles for demonstration
   static List<News> news = [
     News(
       id: '1',

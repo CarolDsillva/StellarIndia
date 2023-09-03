@@ -5,14 +5,16 @@ import 'package:space/widgets/image_container.dart';
 import '../models/contact_model.dart';
 import '../widgets/bottom_nav_bar.dart';
 
-//This screen has the UI for the Connect/Discovery Screen
-//The information on this page is available in the connect_modal.dart file  in the models directory and contact_scree.dart in the screens directory
+// This screen represents the UI for the Connect/Discovery Screen.
+// The information on this page is available in the connect_modal.dart file in the models directory
+// and contact_screen.dart in the screens directory.
 class DiscoverScreen extends StatelessWidget {
   const DiscoverScreen({Key? key}) : super(key: key);
 
-  static const routeName = '/discover';
+  static const routeName = '/discover'; // Define a named route for this screen.
   @override
   Widget build(BuildContext context) {
+    // Define tabs for different categories.
     List<String> tabs = ['Research Institutes', 'Autonomus Bodies'];
 
     return DefaultTabController(
@@ -23,7 +25,9 @@ class DiscoverScreen extends StatelessWidget {
           backgroundColor: Colors.transparent,
           elevation: 0,
           leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              // Handle the leading button's functionality here.
+            },
             icon: const Icon(
               Icons.bedtime_outlined,
               color: Colors.black,
@@ -53,6 +57,7 @@ class _CategoryNews extends StatelessWidget {
     final contact = Contact.contact;
     return Column(
       children: [
+        // Display a TabBar for category selection.
         TabBar(
           isScrollable: true,
           indicatorColor: Colors.black,
@@ -73,6 +78,7 @@ class _CategoryNews extends StatelessWidget {
           height: MediaQuery.of(context).size.height * 0.5,
           child: TabBarView(
             children: tabs
+                // Display contact information.
                 .map(
                   (tab) => ListView.builder(
                     shrinkWrap: true,
@@ -178,6 +184,8 @@ class _DiscoverNews extends StatelessWidget {
             style: Theme.of(context).textTheme.bodySmall,
           ),
           const SizedBox(height: 20),
+
+          // Display a search input field.
           TextFormField(
             decoration: InputDecoration(
               hintText: 'Search',

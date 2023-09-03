@@ -7,6 +7,7 @@ Widget questionWidget(
     QuestionModel questionModel, void Function() function, bool presed) {
   return Column(
     children: [
+      // Widget to display the question text.
       SizedBox(
         width: double.infinity,
         height: 200.0,
@@ -18,6 +19,8 @@ Widget questionWidget(
           ),
         ),
       ),
+
+      // Loop through answer options and create buttons for each.
       for (int i = 0; i < questionModel.answers!.length; i++)
         Container(
           width: double.infinity,
@@ -28,8 +31,10 @@ Widget questionWidget(
               borderRadius: BorderRadius.circular(8.0),
             ),
             fillColor: AppColor.secondaryColor,
-            onPressed: function,
-            child: Text(questionModel.answers!.keys.toList()[i]),
+            onPressed:
+                function, // Attach the provided function to the button press.
+            child: Text(questionModel.answers!.keys
+                .toList()[i]), // Display answer option text.
           ),
         )
     ],

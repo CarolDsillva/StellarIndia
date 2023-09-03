@@ -9,12 +9,12 @@ import 'package:url_launcher/url_launcher.dart';
 import '../widgets/bottom_nav_bar.dart';
 import '../widgets/image_container.dart';
 
-//This screen has the UI for the Home Screen
+// This screen represents the UI for the Home Screen.
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
-  static const routeName = '/home';
+  static const routeName = '/home'; // Define a named route for this screen.
   @override
   Widget build(BuildContext context) {
     Article article = Article.articles[0];
@@ -25,7 +25,7 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {}, // Handle the leading button's functionality here.
           icon: const Icon(
             Icons.bedtime_outlined,
             color: Colors.white,
@@ -35,7 +35,7 @@ class HomeScreen extends StatelessWidget {
       bottomNavigationBar: const BottomNavBar(index: 0),
       extendBodyBehindAppBar: true,
       body: ListView(padding: EdgeInsets.zero, children: [
-        //The order of the children lies here and is rendered in the same sequence
+        // The order of the children lies here and is rendered in the same sequence.
         _NewsOfTheDay(article: article),
         _BreakingNews(articles: Article.articles),
         _Facts(articles: Article.articles),
@@ -47,7 +47,7 @@ class HomeScreen extends StatelessWidget {
 }
 
 // ----------------------------------------------------------------
-// The following Contains the Space Missions and the carousel on the app
+// The following Contains the Space Missions and the carousel on the app.
 class _BreakingNews extends StatelessWidget {
   const _BreakingNews({
     Key? key,
@@ -175,8 +175,9 @@ class _Facts extends StatelessWidget {
   }
 }
 
-//This screen has the UI for the Latest News
-//The information on this page is available in the news_modal.dart file in the models directory
+// This screen has the UI for the Latest News
+// The information on this page is available in the news_modal.dart file in the models directory
+
 class _LatestNews extends StatelessWidget {
   const _LatestNews({
     Key? key,
@@ -261,9 +262,9 @@ class _LatestNews extends StatelessWidget {
   }
 }
 
-//This screen has the UI for the hero Section
-//The following consists of a hero image along with an option to read more
-//The information on this page is available in the articles_modal.dart file in the models directory
+// This screen has the UI for the hero Section
+// The following consists of a hero image along with an option to read more
+// The information on this page is available in the articles_modal.dart file in the models directory
 class _NewsOfTheDay extends StatelessWidget {
   const _NewsOfTheDay({
     Key? key,

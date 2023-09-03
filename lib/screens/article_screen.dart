@@ -4,15 +4,19 @@ import '../models/article_model.dart';
 import '../widgets/custom_tag.dart';
 import '../widgets/image_container.dart';
 
-//This screen has the UI for the article and space missions
-//The information on this page is available in the article_modal.dart file in the models directory
+// This screen represents the UI for displaying articles and space missions.
+// The information for this page is available in the article_model.dart file in the models directory.
+
 class ArticleScreen extends StatelessWidget {
   const ArticleScreen({Key? key}) : super(key: key);
 
-  static const routeName = '/article';
+  static const routeName = '/article'; // Define a named route for this screen
   @override
   Widget build(BuildContext context) {
+    // Retrieve the 'Article' object from the route arguments
     final article = ModalRoute.of(context)!.settings.arguments as Article;
+
+    // Image Background
     return ImageContainer(
       width: double.infinity,
       imageUrl: article.imageUrl,
@@ -26,7 +30,7 @@ class ArticleScreen extends StatelessWidget {
         extendBodyBehindAppBar: true,
         body: ListView(
           children: [
-            //The following is the structure of the articles page
+            // Structure of the article page consists of headline and body
             _NewsHeadline(article: article),
             _NewsBody(article: article)
           ],
@@ -36,6 +40,7 @@ class ArticleScreen extends StatelessWidget {
   }
 }
 
+// This widget represents the news body for the Articles section
 class _NewsBody extends StatelessWidget {
   const _NewsBody({
     Key? key,
@@ -81,6 +86,8 @@ class _NewsBody extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 20),
+
+          // Display the article title
           Text(
             article.title,
             style: Theme.of(context)
@@ -89,12 +96,16 @@ class _NewsBody extends StatelessWidget {
                 .copyWith(fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 20),
+
+          // Display the article body text
           Text(
             article.body,
             style:
                 Theme.of(context).textTheme.bodyMedium!.copyWith(height: 1.5),
           ),
           const SizedBox(height: 20),
+
+          // Grid for displaying article images
           GridView.builder(
               shrinkWrap: true,
               itemCount: 2,
@@ -115,6 +126,7 @@ class _NewsBody extends StatelessWidget {
   }
 }
 
+// This widget represents the news headline for the Articles section
 class _NewsHeadline extends StatelessWidget {
   const _NewsHeadline({
     Key? key,
@@ -134,6 +146,8 @@ class _NewsHeadline extends StatelessWidget {
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.15,
           ),
+
+          // Display institution icon and category
           CustomTag(
             backgroundColor: Colors.grey.withAlpha(150),
             children: [
@@ -146,6 +160,8 @@ class _NewsHeadline extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 10),
+
+          // Display the article title and subtitle
           Text(
             article.title,
             style: Theme.of(context).textTheme.headlineSmall!.copyWith(

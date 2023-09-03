@@ -4,6 +4,7 @@ import 'package:space/screens/home_screen.dart';
 import 'package:space/screens/main_menu.dart';
 import 'package:space/ui/shared/color.dart';
 
+//The following screen contains the UI for the Results Screen displayed after the Quiz Screen
 class ResultScreen extends StatefulWidget {
   int score;
   ResultScreen(this.score, {Key? key}) : super(key: key);

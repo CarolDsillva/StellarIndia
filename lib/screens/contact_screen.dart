@@ -4,16 +4,19 @@ import '../models/contact_model.dart';
 import '../widgets/custom_tag.dart';
 import '../widgets/image_container.dart';
 
-//This screen has the UI for the contact information in the contact page
-//The information on this page is available in the contact_modal.dart file in the models directory
+// This screen displays contact information on the contact page.
+// The contact information is retrieved from the contact_model.dart file in the models directory.
 
 class ContactScreen extends StatelessWidget {
   const ContactScreen({Key? key}) : super(key: key);
 
-  static const routeName = '/contact';
+  static const routeName = '/contact'; // Define a named route for this screen.
   @override
   Widget build(BuildContext context) {
+    // Extract the 'Contact' object passed as an argument.
     final contact = ModalRoute.of(context)!.settings.arguments as Contact;
+
+    // Use the 'ImageContainer' widget to display an image as a background.
     return ImageContainer(
       width: double.infinity,
       imageUrl: contact.imageUrl,
@@ -59,6 +62,7 @@ class _ContactBody extends StatelessWidget {
         children: [
           Row(
             children: [
+              // Display Connection information and creation time.
               CustomTag(
                 backgroundColor: Colors.black,
                 children: [
@@ -104,6 +108,7 @@ class _ContactBody extends StatelessWidget {
                 .copyWith(fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 20),
+          // Display contact title and body.
           Text(
             contact.body,
             style:
@@ -135,6 +140,8 @@ class _ContactHeadline extends StatelessWidget {
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.15,
           ),
+
+          // Display contact category, title, and subtitle.
           CustomTag(
             backgroundColor: Colors.grey.withAlpha(150),
             children: [

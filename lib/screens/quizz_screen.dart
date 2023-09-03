@@ -1,8 +1,11 @@
+// Import necessary Flutter packages and custom modules
 import 'package:flutter/material.dart';
 import 'package:space/data/questions_example.dart';
 import 'package:space/screens/result_screen.dart';
 import 'package:space/ui/shared/color.dart';
 
+// This screen represents the UI for the Quiz Section of the App
+// The information for this page is available in the question_example.dart file in the data directory
 class QuizzScreen extends StatefulWidget {
   const QuizzScreen({Key? key}) : super(key: key);
 
@@ -21,7 +24,8 @@ class _QuizzScreenState extends State<QuizzScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    _controller = PageController(initialPage: 0);
+    _controller =
+        PageController(initialPage: 0); // Initialize the PageController
   }
 
   @override
@@ -31,7 +35,8 @@ class _QuizzScreenState extends State<QuizzScreen> {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("./assets/images/quiz_bg.png"),
+            image: AssetImage(
+                "./assets/images/quiz_bg.png"), // Set background image
             fit: BoxFit.cover,
           ),
         ),
@@ -42,11 +47,13 @@ class _QuizzScreenState extends State<QuizzScreen> {
               onPageChanged: (page) {
                 if (page == questions.length - 1) {
                   setState(() {
-                    btnText = "See Results";
+                    btnText =
+                        "See Results"; // Update button text when reaching the last question
                   });
                 }
                 setState(() {
-                  answered = false;
+                  answered =
+                      false; // Reset answered status when moving to a new question
                 });
               },
               physics: new NeverScrollableScrollPhysics(),
@@ -58,6 +65,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
                     SizedBox(
                       width: double.infinity,
                       child: Text(
+                        //displaying the text for the questions in the quiz
                         "Question ${index + 1}/10",
                         textAlign: TextAlign.start,
                         style: TextStyle(
@@ -76,13 +84,15 @@ class _QuizzScreenState extends State<QuizzScreen> {
                       width: double.infinity,
                       height: 200.0,
                       child: Text(
-                        "${questions[index].question}",
+                        "${questions[index].question}", // Display the current question
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 22.0,
                         ),
                       ),
                     ),
+
+                    //updating the index inorder for the questions to change
                     for (int i = 0; i < questions[index].answers!.length; i++)
                       Container(
                         width: double.infinity,
@@ -100,6 +110,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
                               : AppColor.secondaryColor,
                           onPressed: !answered
                               ? () {
+                                  // Show a modal bottom sheet with additional information on tap
                                   showModalBottomSheet(
                                       backgroundColor:
                                           const Color.fromARGB(255, 14, 24, 78),
@@ -126,7 +137,8 @@ class _QuizzScreenState extends State<QuizzScreen> {
                                             height: 390,
                                             padding: EdgeInsets.all(30),
                                             child: Text(
-                                              questions[index].facts,
+                                              questions[index]
+                                                  .facts, // Display additional facts
                                               textScaleFactor: 1.2,
                                               style: const TextStyle(
                                                   color: Colors.white),
@@ -141,23 +153,27 @@ class _QuizzScreenState extends State<QuizzScreen> {
                                       .answers!
                                       .values
                                       .toList()[i]) {
-                                    score++;
+                                    score++; // Increase the score if the answer is correct
                                     print("yes");
                                   } else {
                                     print("no");
                                   }
                                   setState(() {
-                                    btnPressed = true;
-                                    answered = true;
+                                    btnPressed = true; // Button is pressed
+                                    answered =
+                                        true; // User has answered the question
                                   });
                                 }
                               : null,
-                          child:
-                              Text(questions[index].answers!.keys.toList()[i],
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 18.0,
-                                  )),
+                          child: Text(
+                              questions[index]
+                                  .answers!
+                                  .keys
+                                  .toList()[i], // Display answer options
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18.0,
+                              )),
                         ),
                       ),
                     SizedBox(
@@ -170,14 +186,16 @@ class _QuizzScreenState extends State<QuizzScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => ResultScreen(score)));
+                                  builder: (context) => ResultScreen(
+                                      score))); // Navigate to the results screen
                         } else {
                           _controller!.nextPage(
                               duration: Duration(milliseconds: 250),
-                              curve: Curves.easeInExpo);
+                              curve: Curves
+                                  .easeInExpo); // Move to the next question
 
                           setState(() {
-                            btnPressed = false;
+                            btnPressed = false; // Reset button press status
                           });
                         }
                       },
@@ -186,14 +204,14 @@ class _QuizzScreenState extends State<QuizzScreen> {
                       padding: EdgeInsets.all(18.0),
                       elevation: 0.0,
                       child: Text(
-                        btnText,
+                        btnText, // Display the appropriate action button text
                         style: TextStyle(color: Colors.white),
                       ),
                     )
                   ],
                 );
               },
-              itemCount: questions.length,
+              itemCount: questions.length, // Set the total number of questions
             )),
       ),
     );
